@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar2" />
+
+    <com.ys.ui.view.LMRecyclerView
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_page"
+        android:layout_below="@+id/title"
+        android:clipToPadding="false" />
+
+    <RelativeLayout
+        android:id="@+id/rl_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_tip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/ib_pre_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@mipmap/page_pre" />
+
+        <LinearLayout
+            android:id="@+id/ll_pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@mipmap/page_next" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ll_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_buy"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="请直接点击药品图片购买或输入商品编码购买！"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_footer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_product_code"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edit_circle"
+            android:hint="请输入商品编码"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="2"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/bg_deep"
+            android:textColorHint="@color/gray" />
+
+        <Button
+            android:id="@+id/btn_search_bycode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="确 认"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/rl_footer"
+        layout="@layout/footer_bar" />
+</RelativeLayout>

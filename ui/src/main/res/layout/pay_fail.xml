@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar2" />
+
+    <ImageView
+        android:id="@+id/ad"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/title"
+        android:background="@mipmap/adv_2"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_footer"
+        android:layout_below="@id/ad"
+        android:background="@color/bg"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:background="@color/bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_pay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/face_2" />
+
+            <TextView
+                android:id="@+id/transStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg"
+                android:text="支付失败！"
+                android:textColor="@color/red"
+                android:textSize="30sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_fail_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/transFailDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg"
+                android:text="如果您已支付钱款， 我们将于24小时内退款到您的账户中，\n
+                 如有疑问， 请联系客服 400-060-0289。"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_buy_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_jx_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:padding="10dp"
+                android:text="继续购买"
+                android:textColor="@color/white"
+                android:background="@color/bg_btn"
+                android:textSize="20sp"  />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/rl_footer"
+        layout="@layout/footer_bar" />
+
+    <include layout="@layout/include_loading" />
+
+</RelativeLayout>

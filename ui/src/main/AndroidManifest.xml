@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ys.ui">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--<uses-permission android:name="android.permission.INSTALL_PACKAGES" />-->
+    <!--<uses-permission android:name="android.permission.DELETE_PACKAGES" />-->
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:sharedUserId="android.uid.system"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- <activity android:name="com.ys.ui.activity.MainActivity"></activity> -->
+        <!--<activity
+            android:name=".sample.SelectGoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sample.MainMenu"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".serial.salemachine.SerialPortPreferences"
+            android:screenOrientation="portrait" />
+
+        <!-- 打印机测试 -->
+        <!-- <activity android:name="com.ys.test.activity.SerialPortActivity"/> -->
+        <activity
+            android:name=".serial.print.activity.MainMenu"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service
+            android:name=".service.MyService"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".service.TimerService"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.SerialInitService"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".receiver.BootUpReceiver"
+            android:enabled="true"
+
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+        </receiver>
+
+
+    </application>
+
+</manifest>
