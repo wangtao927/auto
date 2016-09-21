@@ -1,10 +1,7 @@
 package com.ys.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -13,13 +10,10 @@ import android.widget.LinearLayout;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.ys.data.bean.AdvBean;
-import com.ys.data.bean.McGoodsBean;
 import com.ys.data.dao.AdvBeanDao;
 import com.ys.ui.R;
 import com.ys.ui.base.App;
 import com.ys.ui.base.BaseActivity;
-import com.ys.ui.common.manager.DbManagerHelper;
-import com.ys.ui.utils.RandomUtils;
 import com.ys.ui.utils.Utils;
 import com.ys.ui.view.CirclePageView;
 
